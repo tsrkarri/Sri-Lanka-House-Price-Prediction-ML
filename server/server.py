@@ -31,4 +31,4 @@ def price_predict():
 
 if __name__ == "__main__":
     print("Starting Python flask server for FYP-House Price Prediction")
-    app.run()
+    app.run(host="0.0.0.0", port=5000)
