@@ -18,7 +18,7 @@ function onClickPredictPrice(){
 
     console.log(modifiedLocationValue);
 
-    var url = "http://127.0.0.1:5000/predict_house_price";
+    var url = "http://0.0.0.0:34761/predict_house_price";
     
     $.post(url, {
         beds: beds.value,
@@ -36,7 +36,7 @@ function onClickPredictPrice(){
 
 function onPageLoad() {
     console.log("document loaded");
-    var url = "http://127.0.0.1:5000/get_location_names";
+    var url = "http://0.0.0.0:34761/get_location_names";
     $.get(url,function(data,status){
         console.log("got response for location names request");
         if(data){
