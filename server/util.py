@@ -36,7 +36,7 @@ def price_predict(baths, land_size, beds, house_size, location):
         # Inverse transform the scaled output to get the original scale
         unscaled_output = __price_scaler.inverse_transform([[scaled_output]])
 
-        return round(unscaled_output[0][0], 2)
+        return round(unscaled_output[0][0])
     else:
         # Handle the case where location is not found
         return "Location not found in the dataset"
